@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TranslatorAPISample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9t5-Vt-11s">
+                                <rect key="frame" x="57" y="534" width="300" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f2b-Zc-vLV">
+                                <rect key="frame" x="57" y="262.5" width="300" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="日本語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZHp-rJ-lth">
+                                <rect key="frame" x="57" y="505" width="52" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="英語" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uCd-4I-l3F">
+                                <rect key="frame" x="57" y="234" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1M-YY-4bx">
+                                <rect key="frame" x="99" y="163" width="216" height="36"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="翻訳">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="getTranslation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I6I-MW-p6X"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="f2b-Zc-vLV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2FH-Sm-cy6"/>
+                            <constraint firstItem="W1M-YY-4bx" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.4" id="6IO-CH-6hw"/>
+                            <constraint firstItem="uCd-4I-l3F" firstAttribute="leading" secondItem="f2b-Zc-vLV" secondAttribute="leading" id="7Tw-78-tO0"/>
+                            <constraint firstItem="f2b-Zc-vLV" firstAttribute="top" secondItem="uCd-4I-l3F" secondAttribute="bottom" constant="7.5" id="LoI-k2-alk"/>
+                            <constraint firstItem="ZHp-rJ-lth" firstAttribute="leading" secondItem="9t5-Vt-11s" secondAttribute="leading" id="NVp-t1-Xwy"/>
+                            <constraint firstItem="W1M-YY-4bx" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.521739" id="SbW-fc-f9u"/>
+                            <constraint firstItem="f2b-Zc-vLV" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.223214" id="X4q-OT-RG9"/>
+                            <constraint firstItem="9t5-Vt-11s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="YZQ-vv-lbK"/>
+                            <constraint firstItem="9t5-Vt-11s" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="1.4" id="Z8q-s2-RIu"/>
+                            <constraint firstItem="W1M-YY-4bx" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.0401786" id="c7j-TM-sky"/>
+                            <constraint firstItem="f2b-Zc-vLV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="cbq-sC-ztc"/>
+                            <constraint firstItem="f2b-Zc-vLV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.724638" id="eqv-yX-zZh"/>
+                            <constraint firstItem="W1M-YY-4bx" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fxF-2k-SL1"/>
+                            <constraint firstItem="9t5-Vt-11s" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.223214" id="g7d-FE-h49"/>
+                            <constraint firstItem="9t5-Vt-11s" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.724638" id="kfA-w3-eu7"/>
+                            <constraint firstItem="9t5-Vt-11s" firstAttribute="top" secondItem="ZHp-rJ-lth" secondAttribute="bottom" constant="8" id="qMv-gT-4Wh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="textToTranslate" destination="f2b-Zc-vLV" id="YNh-H3-bst"/>
+                        <outlet property="translatedText" destination="9t5-Vt-11s" id="UAF-Xc-FR5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="85.714285714285708"/>
+        </scene>
+    </scenes>
+</document>
